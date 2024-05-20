@@ -1,6 +1,13 @@
 #include <stdio.h>
 
 int main() {
-  printf("Hello, World!");
-  return 0;
+    FILE *Archivo;
+    Archivo = fopen("output.txt", "w");
+    if (Archivo)
+    {
+      fprintf(Archivo, "Hello, World!");
+    }else{
+      printf("Error al abrir el archivo");
+    }
+     return 0;  
 }
